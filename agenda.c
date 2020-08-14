@@ -1,24 +1,3 @@
-/*
-Desenvolva uma agenda eletrônica na qual seja capaz de armazenar, buscar e deletar as seguintes
-informações:
-
-Nome completo:
-Endereço: (rua, número, bairro, cidade, estado)
-Telefone:
-Email:
-CPF:
-RG:
-Data nascimento:
-
-Essas informações deverão se manter persistentes em sistema, ou seja, deverão ser armazenadas
-não somente em memória, mas em um local que seja possível busca-las caso o programa encerre
-ou o computador seja desligado.
-
-A agenda deverá ter um sistema de login e senha, para prover a segurança do sistema. Caso o
-login e senha seja digitado mais de 3 vezes de forma incorreta o sistema deverá bloquear o
-sistema durante 30 segundos. Usar funções, ponteiros e escrita/leitura em arquivos.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -50,13 +29,7 @@ int main()
 
     system("mkdir contatos");
 
-    if (os == 1)
-    {
-        system("cls");
-    } else if (os == 2)
-    {
-        system("clear");
-    }
+    clearTerminal();
     
     while (1)
     {
@@ -221,13 +194,7 @@ void login()
                 display(6);
                 sleep(2);
 
-                if (os == 1)
-                {
-                    system("cls");
-                } else if (os == 2)
-                {
-                    system("clear");
-                }
+                clearTerminal();
             }
 
             if (errorCount == 3)
@@ -236,26 +203,14 @@ void login()
                 sleep(30);
                 errorCount = 0;
 
-                if (os == 1)
-                {
-                    system("cls");
-                } else if (os == 2)
-                {
-                    system("clear");
-                }
+                clearTerminal();
             }
         }
 
         fclose(loginFile);
         sleep(2);
 
-        if (os == 1)
-        {
-            system("cls");
-        } else if (os == 2)
-        {
-            system("clear");
-        }
+        clearTerminal();
     }
 }
 
@@ -407,15 +362,8 @@ void option()
 
     getchar();
 
-    if (os == 1)
-    {
-        sleep(1);
-        system("cls");
-    } else if (os == 2)
-    {
-        sleep(1);
-        system("clear");
-    }
+    sleep(1);
+    clearTerminal();
 
     switch (option)
     {
@@ -438,13 +386,7 @@ void option()
         display(15);
         sleep(2);
 
-        if (os == 1)
-        {
-            system("cls");
-        } else if (os == 2)
-        {
-            system("clear");
-        }
+        clearTerminal();
 
         exit(0);
 
@@ -453,15 +395,9 @@ void option()
     default:
         printf("\nOpção Inexistente!\n");
 
-        if (os == 1)
-        {
-            sleep(1);
-            system("cls");
-        } else if (os == 2)
-        {
-            sleep(1);
-            system("clear");
-        }
+        sleep(1);
+        clearTerminal();
+
         break;
     }
 }
@@ -482,15 +418,8 @@ void add()
     strcpy(fileExtension, ".txt");
     strcat(fileName, fileExtension);
 
-    if (os == 1)
-    {
-        sleep(1);
-        system("cls");
-    } else if (os == 2)
-    {
-        sleep(1);
-        system("clear");
-    }
+    sleep(1);
+    clearTerminal();
 
     document = fopen(fileName, "a");
 
@@ -595,26 +524,12 @@ void search()
     {
         printf("\nNão foi possível encontrar o arquivo!\n");
 
-        if (os == 1)
-        {
-            sleep(1);
-            system("cls");
-        } else if (os == 2)
-        {
-            sleep(1);
-            system("clear");
-        }
+        sleep(1);
+        clearTerminal();
     } else
     {
-        if (os == 1)
-        {
-            sleep(1);
-            system("cls");
-        } else if (os == 2)
-        {
-            sleep(1);
-            system("clear");
-        }
+        sleep(1);
+        clearTerminal();
 
         display(12);
 
@@ -633,13 +548,7 @@ void search()
         printf("Pressione \"enter\" para continuar\n");
         getchar();
         
-        if (os == 1)
-        {
-            system("cls");
-        } else if (os == 2)
-        {
-            system("clear");
-        }
+        clearTerminal();
 
         fclose(document);
     }
@@ -668,15 +577,8 @@ void delete()
     {
         printf("\nNão foi possível encontrar o arquivo\n");
 
-        if (os == 1)
-        {
-            sleep(1);
-            system("cls");
-        } else if (os == 2)
-        {
-            sleep(1);
-            system("clear");
-        }
+        sleep(1);
+        clearTerminal();
     } else
     {
         fclose(document);
@@ -688,15 +590,8 @@ void delete()
         display(14);
     }
     
-    if (os == 1)
-    {
-        sleep(2);
-        system("cls");
-    } else if (os == 2)
-    {
-        sleep(2);
-        system("clear");
-    }
+    sleep(2);
+    clearTerminal();
 }
 
 void clearTerminal()
