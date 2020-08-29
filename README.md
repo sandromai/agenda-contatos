@@ -1,5 +1,5 @@
-<h1 align="center">Agenda</h1>
-
+<h1 align="center">Agenda de Contatos</h1>
+<h3 align="center">Um progama em C que cria uma lista de contatos</h3>
 <br />
 
 ## Sumário
@@ -29,7 +29,8 @@
 - Deleta contatos;
 - Armazena os contatos em disco;
 - Login e senha;
-- Compatibilidade com Windows e Linux.
+- Compatibilidade com Windows e Linux;
+- Localização em PT-BR (somente Linux).
 
 ## Estrutura dos Contatos
 
