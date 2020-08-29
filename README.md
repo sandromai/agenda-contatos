@@ -4,15 +4,15 @@
 
 ## Sumário
 
-- [Bibliotecas Utilizadas](##Bicliotecas-Utilizadas)
-- [Funcionalidades](##Funcionalidades)
-- [Estrutura dos Contatos](##Estrutura-dos-Contatos)
-- [Descrição](##Descrição)
-- [Como Usar](##Como-Usar)
-  - [Baixando o Código](###Baixando-o-Código)
-  - [Baixando o Programa Executável](###Baixando-o-Programa-Executável)
-    - [Windows](####Windows)
-    - [Linux](####Linux)
+- [Bibliotecas Utilizadas](#bicliotecas-utilizadas)
+- [Funcionalidades](#funcionalidades)
+- [Estrutura dos Contatos](#estrutura-dos-contatos)
+- [Descrição](#descrição)
+- [Como Usar](#como-usar)
+  - [Baixando o Código](#baixando-o-código)
+  - [Baixando o Programa Executável](#baixando-o-programa-executável)
+    - [Windows](#windows)
+    - [Linux](#linux)
 
 ## Bibliotecas Utilizadas
 
